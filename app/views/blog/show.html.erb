@@ -38,7 +38,7 @@
   <%= f.input :post_id, :as => :hidden, :input_html => { :value => @post.id } %>
   <%= f.input :name, label: 'Nome:' %>
   <%= f.input :body,:input_html => { :cols => 50, :rows => 10}, label: 'Mensagem:' %>
-  <%= f.button :submit, 'Enviar Comentário', class: 'button' %>
+  <%= f.button :submit, 'Enviar Comentário', class: 'button', disable_with: 'Enviando...' %>
 <% end %>
 </div>
   </div><!-- end div left -->

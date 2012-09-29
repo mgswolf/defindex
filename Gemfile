@@ -16,6 +16,7 @@ gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem "meta_search"
 gem "nested_form"
+gem 'exception_notification'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -35,4 +35,15 @@ Defindex::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.action_mailer.smtp_settings = {
+    #    :enable_starttls_auto => true,
+    :address => "smtp.gmail.com",
+    :port => 25, #587
+    :domain => "mail.google.com",
+    :user_name => "mgswolf@gmail.com",
+    :password => 'mgswolf123844'
+  }
 end
