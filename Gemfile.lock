@@ -34,7 +34,7 @@ GEM
       kaminari (>= 0.13)
       rails (>= 3.1)
     builder (3.0.3)
-    ckeditor (3.7.1)
+    ckeditor (3.7.3)
       mime-types
       orm_adapter
     cocaine (0.3.1)
@@ -155,7 +155,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-kaminari-views
-  ckeditor (= 3.7.1)
+  ckeditor (~> 3.7.3)
   coffee-rails (~> 3.2.1)
   devise
   friendly_id (~> 4.0.1)

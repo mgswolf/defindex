@@ -11,7 +11,7 @@ gem "twitter-bootstrap-rails"
 gem "devise"
 gem "friendly_id", "~> 4.0.1"
 gem "paperclip", "~> 3.0"
-gem "ckeditor", "3.7.1"
+gem "ckeditor", "~> 3.7.3"
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem "meta_search"

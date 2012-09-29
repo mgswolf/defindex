@@ -13,10 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require ckeditor/init
+// require ckeditor/init
 //= require admin/jquery.tokeninput
 //= require jquery_nested_form
-//= require_tree .
+//= require admin/posts
 $(document).ready(function(){
     $('form[data-remote]').bind("ajax:before", function(){
       for (instance in CKEDITOR.instances){
