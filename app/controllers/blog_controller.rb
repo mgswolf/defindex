@@ -3,14 +3,14 @@ class BlogController < ApplicationController
 
   def index
     @search = Post.published.search(params[:search])
-    @posts = @search.page(params[:page]).per(1)
+    @posts = @search.page(params[:page]).per(15)
   end
 
   def show
     @post = Post.published.find(params[:id], include: [:comments])
     @comment = Comment.new
     @title = "#{@post.title} - "
-    @description = @post.body.gsub!(/(<[^>]*>)|\n|\t/s) {" "}
+    @description = @post.summary
   end
 
 end

@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-// require ckeditor/init
+//= require ckeditor/init
 //= require admin/jquery.tokeninput
 //= require jquery_nested_form
 //= require admin/posts
