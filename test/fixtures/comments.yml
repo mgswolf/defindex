@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  post: 
+  name: MyString
+  body: MyText
+  approved: false
+
+two:
+  post: 
+  name: MyString
+  body: MyText
+  approved: false

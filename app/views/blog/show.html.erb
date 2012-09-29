@@ -1,0 +1,50 @@
+<% content_for :main_menu do %>
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to 'Blog', blog_index_path, class: 'active' %></li>
+<% end %>
+  <div id="left">
+    <div class="post">
+      <h2><%= @post.title %></h2>
+      <ul class="tags">
+      <% @post.tags.each do |tag| %>
+        <li><%= link_to tag.name, tag_path(tag) %></a></li>
+      <% end %>
+      </ul>
+      <%= image_tag @post.cover(:medium), class: "cover" %>
+      <div id="article">
+        <%= sanitize(@post.body) %>
+      </div>
+    </div>
+
+  <div id="share">
+<span class='st_sharethis_vcount' displayText='ShareThis'></span>
+<span class='st_facebook_vcount' displayText='Facebook'></span>
+<span class='st_twitter_vcount' displayText='Tweet'></span>
+<span class='st_linkedin_vcount' displayText='LinkedIn'></span>
+<span class='st_googleplus_vcount' displayText='Google +'></span>
+<span class='st_email_vcount' displayText='Email'></span>
+</div><!-- end div share -->
+<h4>Comentários</h4>
+<div id="comments">
+<% @post.comments.approved.each do |comment| %>
+<span class="comment_author"><%= comment.name %></span>
+<p class="comment_message">
+  <%= comment.body %>
+</p>
+<hr />
+<% end %>
+
+<%= simple_form_for @comment, class: 'comment_form' do |f| %>
+  <%= f.input :post_id, :as => :hidden, :input_html => { :value => @post.id } %>
+  <%= f.input :name, label: 'Nome:' %>
+  <%= f.input :body,:input_html => { :cols => 50, :rows => 10}, label: 'Mensagem:' %>
+  <%= f.button :submit, 'Enviar Comentário', class: 'button' %>
+<% end %>
+</div>
+  </div><!-- end div left -->
+
+  <div id="right">
+  <!-- LOMADEE - BEGIN -->
+
+<!-- LOMADEE - END -->
+  </div><!-- end div right -->

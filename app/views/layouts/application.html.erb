@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %> DefIndex: Consultoria e desenvolvimento de sites</title>
+  <meta name="description” content=”<%= @description.blank? ? 'Criação e Desenvolvimento de sites utilizando Ruby on Rails.' : @description %>" />
+  <meta property="og:title" content="DefIndex: Consultoria e desenvolvimento de sites" />
+  <meta property="og:image" content="/assets/face-logo.png" />
+  <meta property="og:description" content="Criação e Desenvolvimento de sites utilizando Ruby on Rails." />
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "2eb7af29-ff10-4117-8e05-a02160e9d186"}); </script>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="header">
+<%= yield :search %>
+  <nav id="menu">
+    <ul>
+      <%= yield :main_menu %>
+    </ul>
+  </nav>
+</div>
+  <h1 id="logo">DefIndex Consultoria e desenvolvimento de sites<span></span></h1>
+<div id="content">
+      <% [:notice,:alert].each do |key|%>
+        <% unless flash[key].blank? %>
+          <div class="alert-message <%= key %>">
+          <p><strong><%= flash[key]%></strong></p>
+          </div>
+        <% end %>
+      <% end %>
+  <%= yield %>
+</div><!-- end div content -->
+<footer id="footer">
+<div id="footer-logo"><%= image_tag 'logo-footer.png', alt: 'defindex logo' %></div>
+<div id="address">Rua 14, n°80 Centro, Caldas Novas - GO<br />
+email: <a href="mailto:mgswolf@gmail.com">mgswolf@gmail.com</a> fone: (64)3453-1468 | (64) 9289-4076
+</div>
+<div id="social-buttons">
+  <%= link_to image_tag("linkedin.png", class: "social"), "http://br.linkedin.com/in/mgswolf", target: "_blank" %>
+  <%= link_to image_tag("twitter.png", class: "social"), "http://twitter.com/mgswolf", target: "_blank" %>
+  <%= link_to image_tag("facebook.png", class: "social"), "http://facebook.com/defindex", target: "_blank" %>
+  <%= link_to image_tag("google.png", class: "social"), "https://plus.google.com/114636792615741429493?
+   rel=author", target: "_blank" %>
+
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,16 @@
+--- 
+applications: 
+  .: 
+    name: defindex
+    framework: 
+      name: rails3
+      info: 
+        mem: 256M
+        description: Rails Application
+        exec: 
+    url: ${name}.${target-base}
+    mem: 128M
+    instances: 1
+    services: 
+      defindex: 
+        type: mysql

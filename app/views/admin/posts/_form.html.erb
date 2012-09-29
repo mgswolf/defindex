@@ -1,0 +1,22 @@
+<%= simple_nested_form_for [:admin,@post] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :cover, as: :file %>
+  <%= f.input :published %>
+  <%= f.input :tag_tokens, data: {load: @post.tags}, label: 'Tags' %>
+  <%= f.input :body, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' }  %>
+  <%#= f.cktext_area :body, :toolbar => 'Full', :width => 800, :height => 400 %>
+  <h4>Comments</h4>
+  <%= f.fields_for :comments do |comment_form| %>
+  <fieldset class="nested">
+    <%= comment_form.input :name %>
+    <%= comment_form.input :body %>
+    <%= comment_form.input :approved %>
+    <%= comment_form.link_to_remove "Remove this comment" %>
+  </fieldset>
+<% end %>
+
+  <div class="well actions">
+    <%= f.button :submit, class: 'btn btn-primary'%>
+    <%= link_to 'Cancel', admin_posts_path, class: 'btn btn-danger' %>
+  </div>
+<% end %>

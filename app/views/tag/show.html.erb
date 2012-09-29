@@ -1,0 +1,30 @@
+<% content_for :main_menu do %>
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to 'Blog', blog_index_path, class: 'active' %></li>
+<% end %>
+  <div id="left">
+    <% @posts.each do |post| %>
+    <div class="post">
+      <h2><%= link_to post.title, blog_path(post) %></h2>
+      <ul class="tags">
+         <% post.tags.each do |tag| %>
+        <li><%= link_to tag.name, tag_path(tag) %></a></li>
+      <% end %>
+      </ul>
+      <%= link_to (image_tag post.cover(:medium), class: 'cover'), blog_path(post) %>
+    </div>
+   <% end %>
+  </div><!-- end div left -->
+  <div id="right">
+  <!-- LOMADEE - BEGIN -->
+<script type="text/javascript" language="javascript">
+	lmd_source="24791001";
+	lmd_si="33412755";
+	lmd_pu="22264751";
+	lmd_c="BR";
+	lmd_wi="120";
+	lmd_he="600";
+</script>
+<script src="http://image.lomadee.com/js/ad_lomadee.js" type="text/javascript" language="javascript"></script>
+<!-- LOMADEE - END -->
+  </div><!-- end div right -->
