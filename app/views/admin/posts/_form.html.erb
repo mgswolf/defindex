@@ -2,7 +2,8 @@
   <%= f.input :title %>
   <%= f.input :cover, as: :file %>
   <%= f.input :published %>
-  <%= f.input :tag_tokens, data: {load: @post.tags}, label: 'Tags' %>
+  <%= f.label :tag_tokes, 'Tags' %>
+  <%= f.text_field :tag_tokens, data: {load: @post.tags} %>
   <%= f.input :body, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' }  %>
   <%#= f.cktext_area :body, :toolbar => 'Full', :width => 800, :height => 400 %>
   <h4>Comments</h4>
@@ -19,4 +20,8 @@
     <%= f.button :submit, class: 'btn btn-primary'%>
     <%= link_to 'Cancel', admin_posts_path, class: 'btn btn-danger' %>
   </div>
+<% end %>
+
+<% content_for :footer do %>
+<%= javascript_include_tag 'admin/posts' %>
 <% end %>
