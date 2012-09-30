@@ -3,6 +3,9 @@
   <li><%= link_to 'Blog', blog_index_path, class: 'active' %></li>
 <% end %>
   <div id="left">
+  <% if @posts.blank? %>
+    Desculpe, nenhum resultado encontrado.
+  <% end %>
     <% @posts.each do |post| %>
     <div class="post">
       <h2><%= link_to post.title, blog_path(post) %></h2>
