@@ -74,7 +74,7 @@ Defindex::Application.configure do
     :port => 25, #587
     :domain => "mail.google.com",
     :user_name => "mgswolf@gmail.com",
-    :password => 'mgswolf123844'
+    :password => 'secret'
   }
 
   config.middleware.use ExceptionNotifier,
