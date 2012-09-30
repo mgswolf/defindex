@@ -12,6 +12,7 @@ class Post < ActiveRecord::Base
 
   accepts_nested_attributes_for :comments, :allow_destroy => true
 
+  default_scope order('created_at DESC')
   scope :published, where(published: true)
 
   def tag_tokens=(tokens)

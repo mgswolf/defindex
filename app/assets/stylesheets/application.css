@@ -198,10 +198,10 @@ pre {
 pre.prettyprint {
   margin-bottom: 18px;
 }
-pre code {
+code {
   padding: 0;
-  color: inherit;
-  background-color: transparent;
+  color: #151515;
+  background-color: #f7f7f7;
   border: 0;
 }
 .pre-scrollable {

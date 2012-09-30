@@ -3,6 +3,7 @@
   <li><%= link_to 'Blog', blog_index_path, class: 'active' %></li>
 <% end %>
   <div id="left">
+  <% cache @post do %>
     <div class="post">
       <h2><%= @post.title %></h2>
       <ul class="tags">
@@ -15,7 +16,7 @@
         <%= sanitize @post.body %>
       </div>
     </div>
-
+  <% end %>
   <div id="share">
 <span class='st_sharethis_vcount' displayText='ShareThis'></span>
 <span class='st_facebook_vcount' displayText='Facebook'></span>
