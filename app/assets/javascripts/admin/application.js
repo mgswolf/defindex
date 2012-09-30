@@ -16,7 +16,7 @@
 //= require ckeditor/init
 //= require admin/jquery.tokeninput
 //= require jquery_nested_form
-// require admin/posts
+//= require admin/posts
 $(document).ready(function(){
     $('form[data-remote]').bind("ajax:before", function(){
       for (instance in CKEDITOR.instances){

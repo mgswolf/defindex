@@ -178,7 +178,6 @@ p#bio{
 pre {
   display: block;
   width: 790px;
-  overflow-x: scroll;
   padding: 8.5px;
   margin: 0 0 9px;
   font-size: 12.025px;
