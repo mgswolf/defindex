@@ -3,9 +3,9 @@
 <head>
   <title><%= @title %> DefIndex: Consultoria e desenvolvimento de sites</title>
   <meta name="description” content=”<%= @description.blank? ? 'Criação e Desenvolvimento de sites utilizando Ruby on Rails.' : @description %>" />
-  <meta property="og:title" content="DefIndex: Consultoria e desenvolvimento de sites" />
+  <meta property="og:title" content="<%= @title %> - DefIndex: Consultoria e desenvolvimento de sites" />
   <meta property="og:image" content="/assets/face-logo.png" />
-  <meta property="og:description" content="Criação e Desenvolvimento de sites utilizando Ruby on Rails." />
+  <meta property="og:description" content="<%= @description.blank? ? 'Criação e Desenvolvimento de sites utilizando Ruby on Rails.' : @description %>" />
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <script type="text/javascript">var switchTo5x=true;</script>
