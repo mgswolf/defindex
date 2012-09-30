@@ -169,7 +169,11 @@ ul.tags li {
 .alert {
   color: #FCEA74;
 }
-
+/* home */
+p#bio{
+  font-size: 22px;
+  text-align: justify;
+}
 /* formatting */
 pre {
   display: block;
